@@ -154,6 +154,10 @@ if (USE_SPHINX)
   configure_file(
     ${CMAKE_SOURCE_DIR}/sphinx/_build/_static/favicon.ico ${BINARY_BUILD_DIR}/favicon.ico COPYONLY)
 
+  # copy leave_notice
+  configure_file(
+    ${CMAKE_SOURCE_DIR}/sphinx/_build/_static/leave_notice.js ${BINARY_BUILD_DIR}/_static/leave_notice.js COPYONLY)
+
   add_custom_target(html ALL
     ${SPHINX_EXECUTABLE}
         -q -b html

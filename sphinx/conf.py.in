@@ -119,11 +119,19 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-#Custom CSS stuff
+#Custom Java/CSS stuff
 def setup(app):
+    # header and footer
     app.add_stylesheet('https://pages.nist.gov/nist-header-footer/css/nist-combined.css')
     app.add_javascript('https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js')
     app.add_javascript('https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js')
+    # google analytics
+    app.add_javascript('https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-xxxxxxxx-x&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c')
+    # leave notice
+		#app.add_javascript('https://code.jquery.com/jquery.1.12.4.min.js')
+    app.add_javascript('https://pages.nist.gov/leaveNotice/js/jquery.leaveNotice-nist.min.js')
+    app.add_stylesheet('https://pages.nist.gov/leaveNotice/css/jquery.leaveNotice.css')
+    app.add_javascript('leave_notice.js')
     return
 
 # -- Options for HTML output ----------------------------------------------
@@ -160,7 +168,7 @@ html_favicon = "favicon.ico"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
