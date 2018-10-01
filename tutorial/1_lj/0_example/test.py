@@ -10,7 +10,7 @@ criteria = feasst.makeCriteriaMetropolis(feasst.args(
 mc = feasst.MC(pair, criteria)
 feasst.addTrialTransform(mc, feasst.args(
     {"transType" : "translate",          # attempt particle translations
-     "maxMoveParam" : str(0.1)}))   # maximum displacement for each dimension
+     "maxMoveParam" : "0.1"}))   # maximum displacement for each dimension
 mc.nMolSeek(50)                     # add particles
 mc.initLog("log", int(1e4))         # output instantaneous values
 mc.initMovie("movie", int(1e4))     # output xyz trajectory

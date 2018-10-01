@@ -150,13 +150,13 @@ if (USE_SPHINX)
     "${BINARY_BUILD_DIR}/conf.py"
     @ONLY)
 
-  # copy favicon
+  # copy favicon, leave notice and extended layout
   configure_file(
     ${CMAKE_SOURCE_DIR}/sphinx/_build/_static/favicon.ico ${BINARY_BUILD_DIR}/favicon.ico COPYONLY)
-
-  # copy leave_notice
   configure_file(
     ${CMAKE_SOURCE_DIR}/sphinx/_build/_static/leave_notice.js ${BINARY_BUILD_DIR}/_static/leave_notice.js COPYONLY)
+  configure_file(
+    ${CMAKE_SOURCE_DIR}/sphinx/_build/_templates/layout.html ${BINARY_BUILD_DIR}/_templates/layout.html COPYONLY)
 
   add_custom_target(html ALL
     ${SPHINX_EXECUTABLE}

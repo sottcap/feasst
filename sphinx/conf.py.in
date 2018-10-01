@@ -125,8 +125,8 @@ def setup(app):
     app.add_stylesheet('https://pages.nist.gov/nist-header-footer/css/nist-combined.css')
     app.add_javascript('https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js')
     app.add_javascript('https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js')
-    # google analytics
-    app.add_javascript('https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-xxxxxxxx-x&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c')
+    ## google analytics
+    #app.add_javascript('https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-xxxxxxxx-x&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c')
     # leave notice
 		#app.add_javascript('https://code.jquery.com/jquery.1.12.4.min.js')
     app.add_javascript('https://pages.nist.gov/leaveNotice/js/jquery.leaveNotice-nist.min.js')
