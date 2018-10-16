@@ -56,3 +56,6 @@ table/*
 # pycache
 __pycache__
 
+#Mac
+.DS_Store
+build
